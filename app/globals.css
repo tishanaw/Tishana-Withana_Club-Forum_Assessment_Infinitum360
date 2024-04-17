@@ -1,0 +1,36 @@
+/* Import Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Define custom CSS variables */
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 66, 153, 225; /* Eye-catching blue */
+  --background-end-rgb: 255, 196, 0; /* Eye-catching yellow */
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 34, 34, 34; /* Dark gray */
+    --background-end-rgb: 17, 17, 17; /* Darker gray */
+  }
+}
+
+/* Apply colors and gradients */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Define custom utility */
+.text-balance {
+  text-wrap: balance;
+}
